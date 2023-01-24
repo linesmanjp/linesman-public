@@ -17,7 +17,7 @@ html += '<div class="articles"><ul>';
 
 for (var i = 0; i < 5; i++) {
 var entry = response.items[i];
-html += '<li><date>' + entry.date + '</date><div class="category">' + entry.categories[0] + '</div><div class="entry"><a target="_blank" href="' + entry.permalink + '">' + entry.title + '</a></div></li>';
+html += '<li><date>' + moment(entry.date).format('YYYY/MM/DD') + '</date><div class="category">' + entry.categories[0] + '</div><div class="entry"><a target="_blank" href="' + entry.permalink + '">' + entry.title + '</a></div></li>';
 }
 
 html += "</ul></div>";

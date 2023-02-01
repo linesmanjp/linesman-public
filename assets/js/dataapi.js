@@ -1,11 +1,11 @@
 var api = new MT.DataAPI({
-baseUrl:  "https://www.kurachic.jp/.data-api/v1/sites/84945/entries/",
+baseUrl:  "https://www.kurachic.jp/.data-api/",
 clientId: "api10entries"
 });
 
 
 var html = '';
-var siteId = 26;
+var siteId = 84945;
 
 api.listEntries(siteId, function(response) {
 if (response.error) {

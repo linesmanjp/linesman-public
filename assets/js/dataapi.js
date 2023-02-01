@@ -1,5 +1,5 @@
 var api = new MT.DataAPI({
-baseUrl:  "https://cms.linesman.jp/app/mt-data-api.cgi",
+baseUrl:  "https://www.kurachic.jp/.data-api/v1/sites/84945/entries/",
 clientId: "api10entries"
 });
 

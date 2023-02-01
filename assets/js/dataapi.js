@@ -1,7 +1,6 @@
 $(document).ready(function(){
   $.getJSON("https://www.kurachic.jp/.data-api/v1/sites/84945/entries/?limit=5", function (results) {
     $.each(results, function (i, item) {
-      console.log(i,item);
       if (i === 'items') {
         var date_data0 = new Date(item[0].date);
         var year = date_data0.getFullYear();
@@ -35,7 +34,6 @@ $(document).ready(function(){
           <li><date>' + date3 + '</date><div class="category">' + item[3].categories[0].label + '</div><div class="entry"><a href="' + item[3].permalink + '" target="_blank">' + item[3].title + '</a></div></li>\
           <li><date>' + date4 + '</date><div class="category">' + item[4].categories[0].label + '</div><div class="entry"><a href="' + item[4].permalink + '" target="_blank">' + item[4].title + '</a></div></li>\
         ');
-        //$('#home-articles').append('<p>' + title + '</p>');
       }
     });
   });

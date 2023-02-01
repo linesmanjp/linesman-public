@@ -7,7 +7,6 @@ $.getJSON("https://www.kurachic.jp/.data-api/v1/sites/84945/entries/?limit=5", f
     var title = item.title;
     var link = item.permalink;
     var date = year + '/' + month + '/' + day + '/';
-    var category = item.entry.categories[0];
-    $('#home-articles .articles ul').append('<li><date>' + date + '</date><div class="category">'  + category +  '</div><div class="entry"><a href="' + link + '">' + title + '</a></div></li>');
+    $('#home-articles .articles ul').append('<li><date>' + date + '</date><div class="entry"><a href="' + link + '">' + title + '</a></div></li>');
   });
 });

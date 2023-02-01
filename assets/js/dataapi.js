@@ -8,8 +8,8 @@ $(document).ready(function(){
       var title = item.title;
       var link = item.permalink;
       var date = year + '/' + month + '/' + day + '/';
-      var category = item.entry[categories][0];
-      $('#home-articles').append('<li><date>' + date + '</date><div class="category">'  + category +  '</div><div class="entry"><a href="' + link + '">' + title + '</a></div></li>');
+      //var category = item.entry[categories][0];
+      $('#home-articles').append('<li><date>' + date + '</date><div class="entry"><a href="' + link + '">' + title + '</a></div></li>');
     });
   });
 });

@@ -4,8 +4,8 @@ $(document).ready(function(){
       if (i === 'items') {
         var date_data0 = new Date(item[0].date);
         var year = date_data0.getFullYear();
-        var month = date_data0.getMonth() + 1;
-        var day = date_data0.getDate();
+        var month = ("0" + (date_data0.getMonth()+1)).slice(-2);
+        var day = ("0" + date_data0.getDate()).slice(-2)
         var date0 = year + '/' + month + '/' + day;
         var date_data1 = new Date(item[1].date);
         var year = date_data1.getFullYear();

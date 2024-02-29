@@ -2,12 +2,47 @@ block var
 doctype html
 html(lang="ja")
   head
-    include ./includes/_meta.pug
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
     title #{title}
     block meta
+      meta(http-equiv="x-dns-prefetch-control" content="on")
+      link(rel="dns-prefetch" href="//connect.facebook.net")
+      link(rel="dns-prefetch" href="//s-static.ak.facebook.com")
+      link(rel="dns-prefetch" href="//static.ak.fbcdn.net")
+      link(rel="dns-prefetch" href="//fonts.googleapis.com")
       meta(name="description", content=description)
       meta(name="keywords", content=keywords)
-      include ./includes/_css.pug
+      link(href="//fonts.googleapis.com/css?family=Roboto%7COpen+Sans:400,300,600,700,800,300italic,400italic,400,300,600,700%7CRaleway:300,400,700%7CQuicksand:400,700o%7CLato%7CDosis|Abel%7CSlabo%7cPoppins:300,400,500,600'" rel="stylesheet" type="text/css")
+      link(href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Bitter:400,700" rel="stylesheet")
+      link(href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+      link(rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjp.css")
+      link(rel="stylesheet" href="/assets/css/style.css")
+      link(rel="shortcut icon" href="/assets/ico/favicon.ico" type="image/x-icon")
+      link(rel="apple-touch-icon" href="/assets/ico/apple-touch-icon57.png")
+      link(rel="apple-touch-icon" sizes="57x57" href="/assets/ico/apple-touch-icon57.png")
+      link(rel="apple-touch-icon" sizes="72x72" href="/assets/ico/apple-touch-icon72.png")
+      link(rel="apple-touch-icon" sizes="114x114" href="/assets/ico/apple-touch-icon114.png")
+      link(rel="apple-touch-icon" sizes="144x144" href="/assets/ico/apple-touch-icon144.png")
+      meta(property="og:locale", content="ja_JP")
+      meta(property="og:title", content="株式会社ラインズマン")
+      meta(property="og:type", content="website")
+      meta(property="og:url", content="https://www.linesman.jp/")
+      meta(property="og:image", content="https://www.linesman.jp/uploads/ogp.png")
+      meta(property="og:site_name", content="ラインズマン")
+      meta(property="og:description", content="築古物件の管理ならラインズマンにお任せください。リフォーム・リノベーションからその後の管理まで、オーナーが選べる豊富なプランをご用意しています。")
+      meta(property="fb:pages", content="349060091883198")
+      meta(property="fb:app_id", content="100275450180630")
+      meta(property="article:publisher", content="https://www.facebook.com/linesmanjp/")
+      meta(property="article:published_time", content="Tue, 30 Apr 2013 19:04:09 +0900")
+      meta(property="article:modified_time", content="Mon, 16 Jan 2023 07:30:37 +0900")
+      meta(property="og:updated_time", content="Mon, 16 Jan 2023 07:30:37 +0900")
+      meta(name="twitter:card", content="summary_large_image")
+      meta(name="twitter:site", content="@Linesman_101")
+      meta(name="twitter:domain", content="ラインズマン")
+      meta(name="twitter:creator", content="@Linesman_101")
+      meta(name="twitter:image:src", content="https://www.linesman.jp/uploads/ogp.png")
     block css
   body#top(class=bodyclass)
     include ./includes/_header.pug
@@ -16,5 +51,6 @@ html(lang="ja")
       block body
     block outsidebody
     include ./includes/_footer.pug
-    include ./includes/_plugins.pug
+    script(src="/assets/js/component.js")
+    script(src="/assets/js/common.js")
     block end_of_body

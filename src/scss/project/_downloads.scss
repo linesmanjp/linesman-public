@@ -1,0 +1,220 @@
+@use "../global";
+
+.downloads-list {
+	.container {
+		.wrapper {
+			position: relative;
+			padding-bottom: 64px;
+			width: global.$width;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.title {
+		margin-bottom: 64px;
+		padding: 64px 0 0;
+		text-align: center;
+		letter-spacing: 0.6px;
+		> span {
+			margin-top: 48px;
+			margin-bottom: 48px;
+			font-size: 1.6rem;
+			font-weight: 600;
+			line-height: 1;
+			display: block;
+
+		}
+		small {
+			display: block;
+			font-size: 1.4rem;
+			line-height: 1;
+			font-weight: 600;
+			color: global.$dark-gray;
+		}
+		h1,
+		h2 {
+			font-family: Poppins,sans-serif;
+			font-weight: 600;
+			font-size: 4rem;
+			line-height: 1;
+			margin-bottom: 12px;
+			letter-spacing: 8px;
+			color: global.$green;
+			text-transform: uppercase;
+		}
+		p {
+			margin: 0;
+			font-size: 1.4rem;
+			font-weight: 300;
+		}
+		hr {
+			width: 100px;
+			border: none;
+			background: global.$green;
+			height: 1px;
+			margin-top: 24px;
+			margin-bottom: 24px;
+		}
+		.lead {
+			margin-top: 16px;
+			color: global.$dark-gray;
+			text-align: center;
+			font-size: 1.4rem;
+			line-height: 1.6;
+			font-weight: 400;
+
+			p {
+				margin-bottom: 12px;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.downloads {
+		@include global.flex(wrap,center,flex-start);
+		.download {
+			flex-basis: 23%;
+			margin-bottom: 36px;
+			box-sizing: border-box;
+			margin: 0 2%;
+			h2 {
+				color: global.$green;
+				text-align: center;
+				font-weight: 600;
+				font-size: 1.4rem;
+				line-height: 1;
+				background-color: global.$light-green;
+				padding: 18px 0;
+				border-radius: 5px;
+				margin-bottom: 0;
+				i {
+					display: inline-block;
+					margin-right: 5px;
+				}
+			}
+			hr {
+				width: 100px;
+				border: none;
+				background: global.$green;
+				height: 1px;
+				margin-top: 24px;
+				margin-bottom: 24px;
+			}
+			ul {
+				li {
+					font-weight: 400;
+					font-size: 1.4rem;
+					border-radius: 5px;
+					&:nth-chid(2n) {
+						background-color: #fbfbfb;
+					}
+					&:hover {
+						background-color: global.$light-green;
+					}
+					a {
+						display: block;
+						padding: 8px 16px;
+						color: global.$green;
+						i {
+							display: inline-block;
+							margin-right: 10px;
+							width: 24px;
+							height: 24px;
+							text-align: center;
+							line-height: 26px;
+							border-radius: 100%;
+							overflow: hidden;
+							background-color: global.$light-green;
+							color: global.$green;
+							box-shadow: 0 0 5px rgba(190,190,190,0.5);
+							border: 1px solid global.$green;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1120px) {
+	.downloads-list {
+		.container {
+			.wrapper {
+				width: auto;
+			}
+		}
+		.title {
+			padding-left: global.$webkit-side-padding;
+			padding-right: global.$webkit-side-padding;
+			> span {
+				margin-top: 36px;
+				margin-bottom: 36px;
+				font-size: 1.4rem;
+			}
+			small {
+				font-size: 1.3rem;
+			}
+			h1,
+			h2 {
+				font-size: 3rem;
+				margin-bottom: 12px;
+			}
+			p {
+				font-size: 1.3rem;
+			}
+		}
+		.downloads {
+			flex-wrap: nowrap;
+			.download {
+				flex-basis: 29%;
+				margin: 0 2%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.downloads-list {
+		.container {
+			margin-top: global.$sp-header-height;
+			.wrapper {
+				margin-left: 0;
+				margin-right: 0;
+				display: block;
+			}
+		}
+		.title {
+			margin-bottom: 32px;
+			padding-top: 32px;
+			padding-bottom: 32px;
+			.lead {
+				text-align: left;
+				font-size: 1.3rem;
+				br {
+					display: none;
+				}
+			}
+		}
+		.downloads {
+			padding-left: global.$webkit-side-padding;
+			padding-right: global.$webkit-side-padding;
+			display: block;
+			.download {
+				flex-basis: auto;
+				margin-bottom: 24px;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 599px) {
+	.downloads-list {
+		.title {
+			padding-bottom: 0;
+			margin-bottom: 12px;
+		}
+	}
+}

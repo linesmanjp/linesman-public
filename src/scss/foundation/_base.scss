@@ -1,0 +1,82 @@
+@use "../global";
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	line-height: 1;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
+}
+
+
+.st0{
+	fill: #231815;
+}
+
+.st1{
+	fill: global.$green;
+}
+
+html {
+	overflow-x:hidden;
+	overflow-y:auto;
+	font-size: 62.5%;
+}
+
+body {
+	//font-family: "Helvetica","Noto Sans JP","Yu Gothic",YuGothic,"ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	font-family: Hiragino Sans,Hiragino Kaku Gothic ProN,Meiryo,sans-serif;
+	font-size: 10px;
+	font-size: 1.0rem;
+	line-height: 1.5;
+	position: relative;
+	color: global.$black;
+	padding: 0;
+	margin: 0;
+	background-color: #FFF;
+	//min-width: global.$width;
+	width: 100%;
+	height: 100%;
+	letter-spacing: 0.6px;
+	font-weight: 300;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-feature-settings: "palt";
+	font-feature-settings: "palt";
+	&.locked {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+a {
+	color: global.$black;
+	text-decoration: none;
+	@include global.animation(.2s,ease-in);
+	&:hover {
+		color: global.$green;
+		@include global.animation(.2s,ease-in);
+	}
+}
+
+@media only screen and (max-width: 1480px) {
+	body {
+		min-width: auto;
+	}
+}
+
+@media screen and (max-width: 1120px) {
+
+}

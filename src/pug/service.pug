@@ -1,0 +1,328 @@
+extends ./_layout
+block var
+  - title = "お部屋探しオーダー | LINESMAN"
+  - keywords = "不動産,マッチング,物件管理,賃貸,売買"
+  - description = "ラインズマンは暮らしを豊かにするために、マッチングやコンシェルジュなどの不動産サービスを提供する会社です。"
+  - url = "https://www.linesman.jp/"
+  - og_type = "article"
+  - og_img = "https://www.linesman.jp/uploads/ogp.png"
+  - published_date = "2016-10-07T17:14:10+09:00"
+  - modified_date = "2016-10-07T18:04:02+09:00"
+  - bodyclass = 'single'
+block body
+  .container
+    .title
+      h1 ORDER
+      small お部屋探し
+      .lead 「良い物件」は人それぞれ違います。ご希望の条件をしっかりヒヤリングし、
+        br
+        | 物件はもちろん、契約内容、管理会社なども調査し、納得できる物件を探し出します。
+      hr
+    .wrapper
+      #side
+        nav
+          ul
+            li
+              a.current(href="") お部屋探し
+            li
+              a(href="") 退去費用診断
+            li
+              a(href="") 入居後サポート
+      main#main
+        .entry-body
+            h2 個別対応プラン
+            h3 通常
+            p 通常価格
+            h3 賃貸
+            p 月額管理サービスにご加入の場合
+            h2 日常管理
+            table
+              thead
+                tr
+                  th サービス
+                  th 内容
+              tbody
+                tr
+                  th 入居者の募集
+                  td
+                    ul
+                      li 各専門家による募集図面の作成・写真撮影（別途広告費など請求することはありません）
+                      li 契約書作成
+                      li 契約手続き
+                      li 鍵の受渡し
+                tr.price
+                  th 価格
+                  td
+                    ol.clear
+                      li
+                        span 通常・賃貸
+                        p 成約時賃料の1ヶ月分
+                tr
+                  th 家賃管理
+                  td
+                    ul
+                      li 家賃の入金管理
+                      li 滞納への催促対応
+                tr.price
+                  th 価格
+                  td
+                    ol.clear
+                      li
+                        span 通常
+                        p 2,000円
+                      li
+                        span 賃貸
+                        p 500円
+                tr
+                  th 更新手続き
+                  td
+                    ul
+                      li 賃貸借契約の更新
+                      li 保険の手続き
+                tr.price
+                  th 価格
+                  td
+                    ol.clear
+                      li
+                        span 通常
+                        p 賃料の20％
+                      li
+                        span 賃貸
+                        p 9,800円
+                tr
+                  th 退去立会い・敷金精算
+                  td
+                    ul
+                      li 退去の立会い
+                      li 敷金の精算表の作成
+                tr.price
+                  th 価格
+                  td
+                    ol.clear
+                      li
+                        span 通常
+                        p 3,000円
+                      li
+                        span 賃貸
+                        p プランに含む
+                tr
+                  th お知らせチラシの作成
+                  td
+                    ul
+                      li 各入居者へのお知らせの手紙・貼紙の作成
+                      li ラミレート加工
+                tr.price
+                  th 価格
+                  td
+                    ol.clear
+                      li
+                        span 通常
+                        p 500円
+                      li
+                        span 賃貸
+                        p プランに含む
+                tr
+                  th 共用部電球交換
+                  td
+                    ul
+                      li 作業工賃（別途　電球代がかかります）
+                tr.price
+                  th 価格
+                  td
+                    ol.clear
+                      li
+                        span 通常
+                        p 1,500円
+                      li
+                        span 賃貸
+                        p プランに含む
+                tr
+                  th 退室時の鍵交換
+                  td
+                    ul
+                      li シリンダーの交換
+                      li 標準ディンプルキー
+                tr.price
+                  th 価格
+                  td
+                    ol.clear
+                      li
+                        span 通常
+                        p 13,000円〜
+                      li
+                        span 賃貸
+                        p 8,000円〜
+            table
+              caption 清掃管理
+              thead
+                tr
+                  th サービス
+                  th 内容
+              tbody
+                tr
+                  th 日常清掃（1回）
+                  td
+                    ul
+                      li 共用部掃き掃除、ポスト掃除
+                      li 駐車場、駐輪場、クモの巣除去、エントランス清掃
+                    p 清掃時間　約30-40分
+                tr.price
+                  th 価格
+                  td
+                    ol.clear
+                      li
+                        span 通常
+                        p 1,000円
+                      li
+                        span 通常
+                        p 800円
+                tr
+                  th ゴミの整理（１回）
+                  td
+                    ul
+                      li ゴミの分別・整理
+                      li ゴミの分別促進ポスターの作成・注意・対応（粗大ごみについては別途処分費用がかかります）
+                tr.price
+                  th 価格
+                  td
+                    ol.clear
+                      li
+                        span 通常
+                        p 1,200円
+                      li
+                        span 通常
+                        p 800円
+                tr
+                  th 特別清掃（1回）
+                  td
+                    ul
+                      li 高圧洗浄、ポリッシャークリーニング
+                      li エントランスガラス清掃
+                    p 清掃時間　約60分
+                tr.price
+                  th 価格
+                  td
+                    ol.clear
+                      li
+                        span 通常
+                        p 25,000円〜
+                      li
+                        span 通常
+                        p 20,000円〜
+              tfoot
+                tr.price.noborder
+                  td(colspan='2')
+                    strong 定期清掃価格参考
+                    dl.row-fluid
+                      dt.span4 2階建アパート　総戸数10戸
+                      dd.span8
+                        ol.clear
+                          li
+                            span 通常
+                            p 25,000円
+                          li
+                            span 賃貸
+                            p 20,000円
+                    dl.row-fluid
+                      dt.span4 3階建アパート　総戸数18戸
+                      dd.span8
+                        ol.clear
+                          li
+                            span 通常
+                            p 40,000円
+                          li
+                            span 賃貸
+                            p 33,000円
+            table
+              caption 現状回復ハウスクリーニング
+              thead
+                tr
+                  th サービス
+                  th 内容
+              tbody
+                tr
+                  th 現状回復ハウスクリーニング
+                  td
+                    ul
+                      li 水周り一式（カビ・石鹸カス・油汚れ・水アカ等の除去、洗浄）
+                      li
+                        | ガラス（ガラス面サッシ・網戸・雨戸の洗浄）
+                      li 玄関、収納、建具、照明、その他付属されている器具の類の洗浄、拭き上げ
+                      li 床　ワックス剥離・塗布、カーペットや畳の掃除がけ
+                      li エアコン　フィルター洗浄
+              tfoot
+                tr.price.noborder
+                  td(colspan='2')
+                    strong 広さ別
+                    dl.row-fluid
+                      dt.span4 1ROOM・1K
+                      dd.span8
+                        ol.clear
+                          li
+                            span 通常
+                            p 25,000円
+                          li
+                            span 賃貸
+                            p 20,000円
+                    dl.row-fluid
+                      dt.span4 1DK・1LDK・2K
+                      dd.span8
+                        ol.clear
+                          li
+                            span 通常
+                            p 28,000円
+                          li
+                            span 賃貸
+                            p 23,000円
+                    dl.row-fluid
+                      dt.span4 2DK・2LDK・3K
+                      dd.span8
+                        ol.clear
+                          li
+                            span 通常
+                            p 33,000円
+                          li
+                            span 賃貸
+                            p 30,000円
+                    dl.row-fluid
+                      dt.span4 3DK・3LDK
+                      dd.span8
+                        ol.clear
+                          li
+                            span 通常
+                            p 40,000円
+                          li
+                            span 賃貸
+                            p 38000円
+                    dl.row-fluid
+                      dt.span4 4DK以上
+                      dd.span8
+                        ol.clear
+                          li
+                            span 通常
+                            p 50,000円
+                          li
+                            span 賃貸
+                            p 48,000円
+            table
+              caption オプション
+              thead
+                tr
+                  th サービス
+                  th 内容
+              tbody
+                tr
+                  th オプション
+                  td
+                    ul
+                      li エアコン内部洗浄
+                tr.price
+                  th 価格
+                  td
+                    ol.clear
+                      li
+                        span 通常
+                        p 12,000円
+                      li
+                        span 賃貸
+                        p 10,000円

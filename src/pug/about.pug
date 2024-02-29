@@ -1,0 +1,54 @@
+extends ./_layout
+block var
+  - title = "会社概要 | LINESMAN"
+  - keywords = "不動産,マッチング,物件管理,賃貸,売買"
+  - description = "ラインズマンは暮らしを豊かにするために、マッチングやコンシェルジュなどの不動産サービスを提供する会社です。"
+  - url = "https://www.linesman.jp/"
+  - og_type = "article"
+  - og_img = "https://www.linesman.jp/uploads/ogp.png"
+  - published_date = "2016-10-07T17:14:10+09:00"
+  - modified_date = "2016-10-07T18:04:02+09:00"
+  - bodyclass = 'single'
+block body
+  .container
+    .title
+      h1 ABOUT US
+      small 会社概要
+      hr
+    .wrapper
+      #side
+        nav
+          ul
+            li
+              a.current(href="") 会社概要
+            li
+              a(href="") スタッフ
+      main#main
+        .entry-body
+          table
+            tbody
+              tr
+                th 社名
+                td 株式会社ラインズマン
+              tr
+                th 所在地
+                td 東京都新宿区高田馬場3丁目16-2-101
+              tr
+                th 代表者
+                td 門傳義文
+              tr
+                th 設立
+                td 2013年4月8日
+              tr
+                th 資本金
+                td 3,000,000円（2013年4月末現在）
+              tr
+                th 事業内容
+                td
+                  ul
+                    li 賃貸住宅の入居者斡旋
+                    li インターネット入居者斡旋
+                    li 賃貸住宅の運営管理
+                    li 建築の企画提案・テナント誘致
+                    li 賃貸住宅のリフォーム
+                    li 損害保険代理業

@@ -1,0 +1,630 @@
+@use "../global";
+
+.single {
+	.container {
+		.wrapper {
+			position: relative;
+			padding-bottom: 64px;
+			width: global.$width_single;
+			margin-left: auto;
+			margin-right: auto;
+			@include global.flex(nowrap,space-between,flex-start);
+		}
+	}
+	#main {
+		margin-left: 32px;
+		flex: 1;
+	}
+	#side {
+		width: 180px;
+		padding-bottom: 32px;
+		ul {
+			li {
+				margin-bottom: 32px;
+				font-size: 1.5rem;
+				a {
+					&.current,
+					&:hover {
+						font-weight: 600;
+						color: global.$green;
+					}
+					&:before {
+						font-family: "Ionicons";
+						content: "\f3d3";
+						display: inline-block;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+	.title {
+		margin-bottom: 64px;
+		padding: 64px 0 0;
+		text-align: center;
+		letter-spacing: 0.6px;
+		> span {
+			margin-top: 48px;
+			margin-bottom: 48px;
+			font-size: 1.6rem;
+			font-weight: 600;
+			line-height: 1;
+			display: block;
+
+		}
+		small {
+			display: block;
+			font-size: 1.4rem;
+			line-height: 1;
+			font-weight: 600;
+			color: global.$dark-gray;
+		}
+		h1 {
+			font-family: Poppins,sans-serif;
+			font-weight: 600;
+			font-size: 4rem;
+			line-height: 1;
+			margin-bottom: 12px;
+			letter-spacing: 8px;
+			color: global.$green;
+		}
+		p {
+			margin: 0;
+			font-size: 1.4rem;
+			font-weight: 300;
+		}
+		hr {
+			width: 100px;
+			border: none;
+			background: global.$green;
+			height: 1px;
+			margin-top: 24px;
+			margin-bottom: 24px;
+		}
+		.lead {
+			margin-top: 16px;
+			color: global.$dark-gray;
+			text-align: center;
+			font-size: 1.4rem;
+			line-height: 1.6;
+			font-weight: 400;
+
+			p {
+				margin-bottom: 12px;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.entry-body {
+		font-size: 1.4rem;
+		line-height: 1.8;
+		a {
+			color: global.$green;
+			text-decoration: underline;
+		}
+		.t-center {
+			text-align: center;
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-bottom: 18px;
+			font-weight: 600;
+		}
+		ul,
+		ol,
+		p,
+		table,
+		figure,
+		.figures,
+		.steps {
+			margin-bottom: 36px;
+		}
+		h1 {
+			text-align: center;
+			font-size: 2rem;
+		}
+		h2 {
+			font-size: 1.8rem;
+		}
+		h3 {
+			font-size: 1.6rem;
+		}
+		.price {
+			color: global.$green;
+			font-weight: 600;
+			font-size: 1.6rem;
+			padding: 16px;
+			background-color: global.$light-green;
+			margin-bottom: 12px;
+			border-radius: 5px;
+			&:before {
+				font-family: "Ionicons";
+				content: "\f2aa";
+				display: inline-block;
+				margin-right: 5px;
+			}
+		}
+		p {
+			font-weight: 300;
+		}
+		figure {
+			figcaption {
+				padding-top: 8px;
+				font-weight: 300;
+				font-size: 1.2rem;
+			}
+		}
+		img {
+			display: inline-block;
+			box-shadow: 0 0 10px rgba(190,190,190,0.5);
+			max-width: 100%;
+			height: auto;
+		}
+		#map {
+			height: 450px;
+			margin-bottom: 36px;
+			img {
+				box-shadow: none !important;
+			}
+		}
+		table {
+			width: 100%;
+			box-sizing: border-box;
+			table-layout: auto;
+			border-collapse: separate;
+			padding: 0;
+			box-shadow: 0 0 5px rgba(190,190,190,0.5);
+			padding: 12px;
+			border-radius: 5px;
+			border: 1px solid #EBEBEB;
+			caption {
+				font-weight: 600;
+				font-size: 1.8rem;
+				line-height: 1;
+				text-align: center;
+				margin-bottom: 32px;
+				&:after {
+					margin-top: 24px;
+					display: block;
+					position: relative;
+					content: "";
+					height: 1px;
+					width: 100px;
+					margin-left: auto;
+					margin-right: auto;
+					background: global.$gray;
+				}
+			}
+			tr {
+				th,
+				td {
+					border: 5px solid #FFF;
+					padding: 0.5em 1em;
+				}
+				th {
+					width: 30%;
+					background-color: #fbfbfb;
+					font-weight: 600;
+				}
+			}
+			thead {
+				tr {
+					th,
+					td {
+						font-weight: 600;
+						background: global.$light-green;
+						color: global.$green;
+						text-align: center;
+					}
+				}
+			}
+			&.center {
+				thead {
+					th {
+						text-align: center;
+					}
+				}
+				tbody {
+					td {
+						text-align: center;
+					}
+				}
+			}
+			tbody {
+				tr {
+					th {
+						//background-color: #fbfbfb;
+					}
+				}
+			}
+			tfoot {
+				tr {
+					th,
+					td {
+						padding: 12px;
+						background-color: global.$light-green;
+					}
+				}
+				font-size: 1.3rem;
+			}
+		}
+		ul {
+			margin-left: 24px;
+			li {
+				list-style: square outside;
+			}
+		}
+		ol {
+			margin-left: 24px;
+			li {
+				list-style: decimal outside;
+			}
+		}
+		.steps {
+			@include global.flex(wrap,space-between,stretch);
+			.step {
+				margin-bottom: 48px;
+				flex-basis: 46%;
+				h3 {
+					color: global.$dark-gray;
+					i {
+						display: inline-block;
+						margin-right: 5px;
+					}
+				}
+				p {
+					margin-bottom: 12px;
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.staff {
+			figure {
+				box-sizing: border-box;
+				@include global.flex(nowrap,space-between,stretch);
+				.img {
+					@include global.background(center,center);
+					width: 100px;
+					height: 100px;
+					overflow: hidden;
+					border-radius: 100%;
+					box-shadow: 0 0 10px rgba(190,190,190,0.5);
+				}
+				figcaption {
+					flex: 1;
+					margin-left: 32px;
+					h2 {
+						margin-bottom: 8px;
+						margin-top: 0;
+						line-height: 1;
+						small {
+							font-weight: 300;
+							display: inline-block;
+							font-size: 1.3rem;
+							margin-left: 24px;
+							color: global.$dark-gray;
+						}
+					}
+					span {
+						color: global.$dark-gray;
+						display: block;
+						text-transform: uppercase;
+						font-weight: 500;
+						margin: 12px 0;
+					}
+					p {
+						font-size: 1.3rem;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.service-lists {
+			margin-bottom: 16px;
+			@include global.flex(wrap,space-between,stretch);
+			.service-list {
+				margin-bottom: 12px;
+				flex-basis: 44%;
+				h3 {
+					color: global.$green;
+					i {
+						display: inline-block;
+						margin-right: 5px;
+					}
+				}
+				ul {
+					margin-left: 0;
+					li {
+						list-style: none;
+					}
+				}
+				p {
+					margin-bottom: 12px;
+					font-weight: 600;
+					color: global.$dark-gray;
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.pictures {
+			@include global.flex(wrap,space-between,stretch);
+			.picture {
+				margin-bottom: 48px;
+				flex-basis: 46%;
+				figure {
+					@include global.background(center,center);
+					width: 120px;
+					height: 120px;
+					margin-left: auto;
+					margin-right: auto;
+					overflow: hidden;
+					border-radius: 100%;
+					box-shadow: 0 0 10px rgba(190,190,190,0.5);
+				}
+				h3 {
+					color: global.$dark-gray;
+					i {
+						display: inline-block;
+						margin-right: 5px;
+					}
+				}
+				p {
+					margin-bottom: 12px;
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.figures {
+			@include global.flex(nowrap,center,flex-end);
+			figure {
+				margin-right: 48px;
+				img {
+					width: 240px;
+					display: block;
+				}
+			}
+		}
+		.yt-wrapper {
+			position: relative;
+			padding-bottom: 56.25%;
+			padding-top: 25px;
+			height: 0;
+			overflow: hidden;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(190,190,190,0.5);
+			iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.gmap {
+			position: relative;
+			padding-bottom: 56.25%;
+			padding-top: 30px;
+			height: 0;
+			overflow: hidden;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(190,190,190,0.5);
+			iframe,
+			object,
+			embed {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1120px) {
+	.single {
+		.container {
+			.wrapper {
+				width: auto;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+		#side {
+			ul {
+				li {
+					font-size: 1.3rem;
+				}
+			}
+		}
+		.title {
+			padding-left: global.$webkit-side-padding;
+			padding-right: global.$webkit-side-padding;
+			> span {
+				margin-top: 36px;
+				margin-bottom: 36px;
+				font-size: 1.4rem;
+			}
+			small {
+				font-size: 1.3rem;
+			}
+			h1 {
+				font-size: 3rem;
+				margin-bottom: 12px;
+			}
+			p {
+				font-size: 1.3rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.single {
+		.container {
+			margin-top: global.$sp-header-height;
+			.wrapper {
+				margin-left: 0;
+				margin-right: 0;
+				display: block;
+			}
+		}
+		#side {
+			width: auto;
+			ul {
+				@include global.flex(wrap,flex-start,stretch);
+				li {
+					flex-basis: 50%;
+				}
+			}
+		}
+		#main {
+			margin-left: 0;
+			flex: none;
+		}
+		.title {
+			margin-bottom: 32px;
+			padding-top: 32px;
+			padding-bottom: 32px;
+			.lead {
+				text-align: left;
+				font-size: 1.3rem;
+				br {
+					display: none;
+				}
+			}
+		}
+		.entry-body {
+			.service-lists {
+				display: block;
+				.service-list {
+					flex-basis: auto;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 599px) {
+	.single {
+		.entry-body {
+			font-size: 1.3rem;
+			h1 {
+				font-size: 1.8rem;
+			}
+			h2 {
+				font-size: 1.6rem;
+			}
+			h3 {
+				font-size: 1.4rem;
+			}
+			.price {
+				font-size: 1.6rem;
+			}
+			table {
+				font-size: 1.3rem;
+				caption {
+					font-size: 1.6rem;
+				}
+				tr {
+					th,
+					td {
+						border: none;
+						padding: 0.8em 0;
+					}
+					th {
+						background: none;
+					}
+				}
+				tfoot {
+					tr {
+						th,
+						td {
+							padding-top: 32px;
+						}
+					}
+					font-size: 1.1rem;
+				}
+			}
+			#map {
+				height: 240px;
+			}
+			.staff {
+				figure {
+					box-sizing: border-box;
+					display: block;
+					.img {
+						margin-left: auto;
+						margin-right: auto;
+						width: 100px;
+						height: 100px;
+					}
+					figcaption {
+						margin-top: 12px;
+						flex: none;
+						margin-left: 0;
+						h2 {
+							text-align: center;
+							margin-bottom: 8px;
+							margin-top: 0;
+							line-height: 1;
+							small {
+								display: block;
+								margin-left: 0;
+								margin-top: 16px;
+								font-size: 1.1rem;
+								line-height: 1;
+							}
+						}
+						span {
+							display: block;
+							text-align: center;
+							font-size: 1.1rem;
+						}
+						p {
+							font-size: 1.2rem;
+							br {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			.steps {
+				display: block;
+				.step {
+					margin-bottom: 48px;
+					flex-basis: auto;
+					p {
+						margin-bottom: 12px;
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+			.figures {
+				@include global.flex(wrap,center,flex-end);
+				figure {
+					margin-right: 0;
+					img {
+						width: 100%;
+						max-width: auto;
+					}
+				}
+			}
+		}
+	}
+}

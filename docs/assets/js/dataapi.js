@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
       items.forEach(function(item) {
         var date = new Date(item.date);
         var formattedDate = date.getFullYear() + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' + ('0' + date.getDate()).slice(-2);
-        var entryHtml = '<li><date>' + formattedDate + '</date><div class="category">' + item.categories[0].label + '</div><div class="entry"><a href="' + item.permalink + '" target="_blank">' + item.title + '</a></div></li>';
+        var entryHtml = '<li><div class="category">' + item.categories[0].label + '</div><div class="entry"><time>' + formattedDate + '</time><a href="' + item.permalink + '" target="_blank">' + item.title + '</a></div></li>';
         document.getElementById('home-articles').innerHTML += entryHtml;
       });
     }

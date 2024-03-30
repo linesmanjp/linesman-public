@@ -1,0 +1,389 @@
+@use "../global";
+
+$hero-height: 580px;
+$hero-height-sp: 320px;
+
+.home {
+  .container {
+    background-color: white;
+  }
+  #hero_height {
+    height: $hero-height;
+    @include global.mq(md) {
+      height: $hero-height-sp;
+    }
+  }
+	#hero {
+    position: fixed;
+    top: global.$header-height;
+    width: 100%;
+		height: $hero-height;
+		text-align: center;
+    z-index: -1;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image:url(../img/bg3.jpg);
+    @include global.mq(md) {
+      top: global.$sp-header-height;
+      height: $hero-height-sp;
+    }
+		.hero-contents {
+			position: absolute;
+			top: 50%;
+      transform: translateY(-50%);
+			width: 100%;
+			text-shadow: 0 0 10px rgba(190,190,190,0.8);
+			h1 {
+				font-family: Poppins,sans-serif;
+				font-weight: 600;
+				text-align: center;
+				font-size: 6rem;
+				letter-spacing: 3px;
+        @include global.mq(md) {
+          font-size: 2.6rem;
+        }
+			}
+			p {
+				font-size: 1.6rem;
+				line-height: 1.8;
+				font-weight: 600;
+        @include global.mq(md) {
+          font-size: 1.2rem;
+        }
+			}
+		}
+	}
+
+	.more {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+		margin-top: 32px;
+    column-gap: 40px;
+    @include global.mq(lg) {
+      column-gap: 24px;
+    }
+    @include global.mq(md) {
+      margin-top: 24px;
+      display: block;
+    }
+		a {
+			text-align: center;
+			display: block;
+			padding: 8px 24px;
+			background-color: global.$gray;
+			border: 1px solid global.$gray;
+			font-size: 1.4rem;
+			font-weight: 500;
+			color: #FFF;
+			border-radius: 28px;
+			line-height: 1;
+			box-shadow: 0 0 10px rgba(190,190,190,0.5);
+			@include global.animation(.2s,ease-in);
+			&:nth-of-type(2) {
+				background-color: #FFF;
+				color: global.$black;
+        @include global.mq(md) {
+          margin-top: 8px;
+        }
+				&:hover {
+					@include global.animation(.2s,ease-in);
+					background-color: #FFF;
+					color: global.$green;
+					border: 1px solid global.$green;
+				}
+			}
+      @include global.mq(lg) {
+        font-size: 1.3rem;
+      }
+      @include global.mq(md) {
+        border-radius: 5px;
+        font-size: 1.2rem;
+        padding: 12px 16px;
+      }
+			&:hover {
+				@include global.animation(.2s,ease-in);
+				background-color: global.$green;
+			}
+			span {
+				display: inline-block;
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.title {
+    text-align: left;
+		> span {
+			margin-top: 48px;
+			margin-bottom: 48px;
+			font-size: 1.6rem;
+			font-weight: 600;
+			display: block;
+      @include global.mq(lg) {
+        margin-top: 36px;
+        margin-bottom: 36px;
+        font-size: 1.4rem;
+      }
+      @include global.mq(md) {
+        margin-top: 36px;
+        margin-bottom: 36px;
+        font-size: 1.4rem;
+        text-align: center;
+      }
+		}
+		small {
+			display: block;
+			font-size: 1.4rem;
+			line-height: 1;
+			font-weight: 500;
+			color: global.$dark-gray;
+      @include global.mq(lg) {
+        font-size: 1.3rem;
+      }
+      @include global.mq(md) {
+        font-size: 1.3rem;
+        text-align: center;
+      }
+		}
+		h2 {
+			font-family: Poppins,sans-serif;
+			font-weight: 600;
+			font-size: 4rem;
+			line-height: 1;
+			margin-bottom: 12px;
+			letter-spacing: 8px;
+			color: global.$green;
+      @include global.mq(lg) {
+        font-size: 3rem;
+      }
+      @include global.mq(md) {
+        font-size: 3rem;
+        text-align: center;
+      }
+		}
+		p {
+			margin: 0;
+			font-size: 1.4rem;
+			font-weight: 300;
+      @include global.mq(lg) {
+        font-size: 1.3rem;
+      }
+      @include global.mq(md) {
+        font-size: 1.3rem;
+        text-align: left;
+      }
+		}
+		hr {
+			width: 100px;
+			border: none;
+			background: global.$green;
+			height: 1px;
+			margin-left: 0;
+			margin-top: 24px;
+			margin-bottom: 24px;
+      @include global.mq(md) {
+        display: none;
+      }
+		}
+	}
+
+	.contents-wrapper {
+		padding: 64px 80px;
+		box-sizing: border-box;
+    @include global.mq(lg) {
+      padding: 32px 24px;
+    }
+    @include global.mq(md) {
+      padding: 0;
+    }
+	}
+
+	.service {
+		padding-top: 32px;
+		padding-bottom: 32px;
+		@include global.flex(nowrap,space-between,center);
+    column-gap: 64px;
+    @include global.mq(md) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      row-gap: 24px;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 48px;
+    }
+		figure {
+			@include global.background(center,center);
+			width: 53%;
+			height: 420px;
+      @include global.mq(md) {
+        order: 1;
+        height: 140px;
+        width: 100%;
+      }
+		}
+		.title {
+			flex: 1;
+      @include global.mq(md) {
+        order: 2;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+		}
+	}
+
+	#home-news {
+		background-color: global.$light-green;
+		padding-top: 0;
+    @include global.mq(md) {
+      padding: 32px 24px;
+    }
+		.title {
+			text-align: center;
+			hr {
+				margin-left: auto;
+			}
+		}
+		.articles {
+			ul {
+				li {
+          margin-bottom: 24px;
+					display: grid;
+          grid-template-columns: 120px 1fr;
+          gap: 40px;
+          @include global.mq(md) {
+            display: block;
+            border-top: 1px solid #CCC;
+            padding-top: 16px;
+            margin-bottom: 8px;
+          }
+					time {
+						width: 80px;
+						font-size: 1.4rem;
+						line-height: 1;
+            margin-right: 40px;
+            @include global.mq(md) {
+              font-size: 1.2rem;
+              display: block;
+              margin-bottom: 4px;
+            }
+					}
+					.category {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+						min-width: 120px;
+            padding-left: 24px;
+            padding-right: 24px;
+						font-size: 1.3rem;
+						font-weight: 600;
+						color: global.$green;
+						border: 2px solid global.$green;
+						border-radius: 24px;
+						height: 24px;
+            @include global.mq(md) {
+              display: inline-flex;
+              font-size: 1rem;
+              min-width: auto;
+              padding-left: 16px;
+              padding-right: 16px;
+              margin-bottom: 8px;
+              height: 16px;
+              border-radius: 16px;
+            }
+					}
+					.entry {
+						flex: 1;
+						font-size: 1.4rem;
+            @include global.mq(md) {
+              width: 100%;
+            }
+					}
+				}
+			}
+		}
+		.more {
+			justify-content: center;
+			a {
+				margin-right: 0;
+			}
+		}
+	}
+	#access {
+		background-color: #fbfbfb;
+    @include global.mq(md) {
+      padding: 32px 0;
+    }
+		.title {
+			text-align: center;
+			hr {
+				margin-left: auto;
+			}
+		}
+		#map-wrap {
+			@include global.flex(nowrap,space-between,center);
+      column-gap: 64px;
+      @include global.mq(md) {
+        flex-direction: column;
+      }
+			.address {
+				flex: 1;
+				font-size: 1.6rem;
+        @include global.mq(lg) {
+          font-size: 1.4rem;
+        }
+        @include global.mq(md) {
+          box-sizing: border-box;
+          width: 100%;
+          font-size: 1.2rem;
+          order: 2;
+          padding: 24px;
+        }
+				ul {
+					margin-bottom: 16px;
+					li {
+						font-size: 1.8rem;
+						font-weight: 600;
+						margin-bottom: 16px;
+            @include global.mq(lg) {
+              font-size: 1.6rem;
+            }
+            @include global.mq(md) {
+              font-size: 1.3rem;
+            }
+						a {
+							color: global.$green;
+							font-size: 2.8rem;
+              @include global.mq(lg) {
+                font-size: 2.4rem;
+              }
+              @include global.mq(md) {
+                font-size: 2.2rem;
+              }
+							i,
+							span {
+								display: inline-block;
+							}
+							span {
+								margin-left: 10px;
+							}
+						}
+					}
+				}
+			}
+			#map {
+				width: 55%;
+				min-height: 500px;
+				box-shadow: 0 0 10px rgba(190,190,190,0.5);
+        @include global.mq(md) {
+          width: 100%;
+          order: 1;
+          min-height: 240px;
+        }
+			}
+		}
+	}
+}

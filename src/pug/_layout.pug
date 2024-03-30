@@ -1,0 +1,60 @@
+block var
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(http-equiv="x-dns-prefetch-control" content="on")
+    link(rel="dns-prefetch" href="//static.ak.fbcdn.net")
+    link(rel="dns-prefetch" href="//fonts.googleapis.com")
+    title #{title}
+    meta(name="description", content=description)
+    meta(name="keywords", content=keywords)
+    link(href="//fonts.googleapis.com/css?family=Roboto%7COpen+Sans:400,300,600,700,800,300italic,400italic,400,300,600,700%7CRaleway:300,400,700%7CQuicksand:400,700o%7CLato%7CDosis|Abel%7CSlabo%7cPoppins:300,400,500,600'" rel="stylesheet" type="text/css")
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Bitter:400,700" rel="stylesheet")
+    link(href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjp.css")
+    link(rel="stylesheet" href="/assets/css/style.css")
+    link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")
+    link(rel="manifest", href="/site.webmanifest")
+    link(rel="mask-icon", href="/safari-pinned-tab.svg", color="#ffffff")
+    meta(name="msapplication-TileColor", content="#ffffff")
+    meta(name="theme-color", content="#ffffff")
+    meta(property="og:locale", content="ja_JP")
+    meta(property="og:title", content=title)
+    meta(property="og:type", content="website")
+    meta(property="og:url", content=url)
+    meta(property="og:image", content="https://www.linesman.jp/uploads/ogp.png")
+    meta(property="og:site_name", content="ラインズマン")
+    meta(property="og:description", content=description)
+    meta(property="fb:pages", content="349060091883198")
+    meta(property="fb:app_id", content="100275450180630")
+    meta(property="article:publisher", content="https://www.facebook.com/linesmanjp/")
+    meta(name="twitter:card", content="summary_large_image")
+    meta(name="twitter:site", content="@Linesman_101")
+    meta(name="twitter:domain", content="ラインズマン")
+    meta(name="twitter:creator", content="@Linesman_101")
+    meta(name="twitter:image:src", content="https://www.linesman.jp/uploads/ogp.png")
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MX6FR63');
+    // End Google Tag Manager
+    block css
+  body#top(class=bodyclass)
+    noscript
+      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-MX6FR63", height="0", width="0", style="display:none;visibility:hidden")
+    #fb-root
+    include ./inc/_header.pug
+    block body_header
+    .container
+      block body
+      include ./inc/_footer.pug
+    script(src="/assets/js/bundle.js")
+    block plugins

@@ -1,0 +1,117 @@
+@use "../global";
+
+.service-contents {
+	.container {
+		.wrapper {
+			position: relative;
+			padding-bottom: 64px;
+		}
+	}
+	.services {
+		@include global.flex(wrap,center,flex-start);
+    row-gap: 36px;
+    padding-left: 80px;
+    padding-right: 80px;
+    @include global.mq(lg) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    @include global.mq(md) {
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+    }
+		.service-article {
+			flex-basis: 50%;
+			box-sizing: border-box;
+			a {
+        box-sizing: border-box;
+				border-radius: 8px;
+				padding: 24px;
+				display: block;
+        @include global.mq(md) {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          column-gap: 24px;
+          padding: 12px 24px;
+        }
+				&:hover {
+					background-color: global.$light-green;
+				}
+			}
+			figure {
+				margin-left: auto;
+				margin-right: auto;
+				width: 180px;
+				height: 180px;
+				overflow: hidden;
+				border-radius: 100%;
+				box-shadow: 0 0 10px 0 rgba(190,190,190,0.5);
+				@include global.background(center,center);
+				margin-bottom: 24px;
+        @include global.mq(md) {
+          width: 96px;
+          height: 96px;
+          margin-bottom: 0;
+        }
+			}
+			.detail {
+        @include global.mq(md) {
+          flex: 1;
+        }
+				h2 {
+					text-align: center;
+					font-weight: 600;
+					margin-bottom: 12px;
+					font-size: 1.8rem;
+          @include global.mq(md) {
+            font-size: 1.4rem;
+            text-align: left;
+          }
+				}
+				p {
+					font-size: 1.4rem;
+          @include global.mq(md) {
+            font-size: 1.2rem;
+          }
+				}
+			}
+		}
+	}
+	.service-top {
+		.service-category {
+			box-sizing: border-box;
+			.title {
+				padding: 0;
+				margin-bottom: 16px;
+			}
+			.services {
+				display: block;
+				.service-article {
+					margin-bottom: 0;
+					flex-basis: auto;
+					a {
+						padding: 24px;
+						@include global.flex(nowrap,space-between,stretch);
+						figure {
+							margin-left: 0;
+							margin-right: 0;
+							margin-bottom: 0;
+						}
+						.detail {
+							margin-left: 24px;
+							flex: 1;
+							h2 {
+								text-align: left;
+							}
+							p {
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

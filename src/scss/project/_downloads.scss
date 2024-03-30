@@ -1,0 +1,93 @@
+@use "../global";
+
+.downloads-list {
+	.container {
+		.wrapper {
+			position: relative;
+			padding-bottom: 64px;
+		}
+	}
+	.downloads {
+		display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 36px;
+    padding-left: 80px;
+    padding-right: 80px;
+    @include global.mq(lg) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    @include global.mq(md) {
+      display: block;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+		.download {
+			box-sizing: border-box;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border: 1px solid #EBEBEB;
+      border-radius: 8px;
+      @include global.mq(md) {
+        &:not(:last-of-type) {
+          margin-bottom: 24px;
+        }
+      }
+			h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+				text-align: center;
+				font-weight: bold;
+				font-size: 1.6rem;
+				line-height: 1;
+				background-color: #EBEBEB;
+				padding: 24px 0;
+        column-gap: 8px;
+        color: global.$black;
+        @include global.mq(md) {
+          padding: 16px 0;
+          font-size: 1.4rem;
+        }
+			}
+			ul {
+        padding: 36px;
+        @include global.mq(md) {
+          padding: 24px;
+        }
+				li {
+					font-size: 1.4rem;
+					border-radius: 5px;
+          @include global.mq(md) {
+            font-size: 1.3rem;
+          }
+          &:not(:last-child) {
+            margin-bottom: 24px;
+          }
+					a {
+						display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+						color: global.$green;
+            column-gap: 16px;
+            font-weight: bold;
+            &:hover {
+              text-decoration: underline;
+            }
+						i {
+							display: inline-block;
+							width: 24px;
+							height: 24px;
+							text-align: center;
+							line-height: 26px;
+							border-radius: 100%;
+							overflow: hidden;
+							color: global.$green;
+							box-shadow: 0 0 5px rgba(190,190,190,0.5);
+							border: 1px solid global.$green;
+						}
+					}
+				}
+			}
+		}
+	}
+}

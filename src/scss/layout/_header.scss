@@ -1,0 +1,146 @@
+@use "../global";
+
+#overray {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	background-color: rgba(255,255,255,0.9);
+	z-index: 99999;
+	#overray-header {
+		box-sizing: border-box;
+		@include global.flex(nowrap,space-between,center);
+		height: global.$sp-header-height;
+		padding-left: global.$webkit-side-padding;
+		padding-right: global.$webkit-side-padding;
+		.logo {
+			flex-basis: 110px;
+			a {
+				position: relative;
+				top: 2px;
+				display: inline-block;
+				svg {
+					display: block;
+					width: 110px;
+				}
+			}
+		}
+		.menu {
+			a {
+				i {
+					font-size: 3rem;
+					line-height: 1;
+				}
+			}
+		}
+	}
+	#g-nav {
+		padding-left: global.$webkit-side-padding;
+		padding-right: global.$webkit-side-padding;
+		margin-top: 64px;
+		li {
+			margin-bottom: 24px;
+			font-size: 1.4rem;
+			a {
+				text-align: -webkit-match-parent;
+				line-height: 1;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+#sp-header {
+	box-sizing: border-box;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+	height: global.$sp-header-height;
+	background-color: rgba(255,255,255,0.9);
+	box-shadow: 0 0 5px rgba(190,190,190,0.2);
+	z-index: 9999;
+	padding-left: global.$webkit-side-padding;
+	padding-right: global.$webkit-side-padding;
+  @include global.mq(md) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+	.logo {
+		flex-basis: 110px;
+		a {
+			position: relative;
+			top: 2px;
+			display: inline-block;
+			svg {
+				display: block;
+				width: 110px;
+			}
+		}
+	}
+	.menu {
+		a {
+			i {
+				font-size: 3rem;
+				line-height: 1;
+			}
+		}
+	}
+}
+
+#header {
+  background-color: white;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+	@include global.flex(nowrap,space-between,center);
+  padding: 0 40px;
+  height: global.$header-height;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  @include global.mq(lg) {
+    padding: 0 24px;
+  }
+  @include global.mq(md) {
+    display: none;
+  }
+	.logo {
+		width: 140px;
+    @include global.mq(lg) {
+      width: 120px;
+    }
+		svg {
+			display: block;
+			width: 140px;
+      @include global.mq(lg) {
+        width: 120px;
+      }
+		}
+	}
+	#g-nav {
+		flex: 1;
+		@include global.flex(nowrap,flex-end,center);
+    column-gap: 40px;
+		li {
+			font-size: 1.3rem;
+      @include global.mq(lg) {
+        font-size: 1.25rem;
+      }
+			a {
+				text-align: -webkit-match-parent;
+				line-height: 1;
+				font-weight: 500;
+        @include global.mq(lg) {
+          font-size: 1.25rem;
+        }
+			}
+		}
+	}
+}

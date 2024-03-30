@@ -1,0 +1,201 @@
+extends ../../../_layout
+block var
+  - title = "退去時の点検と精算 | ラインズマン"
+  - keywords = "お部屋探し、高田馬場、新宿区、高田馬場駅、賃貸物件、東京"
+  - description = "退去時の立ち会い・点検は、100を超える細かい点検項目を用意しています。点検漏れでの後処理は、お互いにいい気持ちはしません。次の生活へ気持ち良く向かうために、きめ細かく点検をします。"
+  - url = "https://www.linesman.jp/services/owner/inspection/"
+  - og_type = "article"
+  - og_img = "https://www.linesman.jp/uploads/ogp.png"
+  - published_date = "2016-10-07T17:14:10+09:00"
+  - modified_date = "2016-10-07T18:04:02+09:00"
+  - bodyclass = 'single'
+block body
+  .title
+    h1 INSPECTION
+    small 退去時の点検と精算
+    .lead 退去時の立ち会い・点検は、100を超える細かい点検項目を用意しています。
+      br
+      | 点検漏れでの後処理は、お互いにいい気持ちはしません。
+      br
+      | 次の生活へ気持ち良く向かうために、きめ細かく点検をします。
+    hr
+  .wrapper
+    #side
+      nav
+        ul
+          li
+            a(href="../trouble/") トラブル対応
+          li
+            a.current(href="#") 退去時の点検と精算
+          li
+            a(href="../residents/") 入居者募集について
+    main#main
+      .entry-body
+        h2 分かりやすく、見やすく、正確に。
+        p 点検後は速やかに精算書を作成。
+          br
+          | わかり易く明瞭な計算方式を採用した精算書をお届けします。「賃貸住宅紛争防止条例」に基づく負担割合もわかりやすく明記するので、敷金精算のトラブルも回避できます。
+        table
+          caption 玄関・廊下
+          tbody
+            tr
+              th 玄関ドア
+              td 破損・開閉機能の点検
+            tr
+              th 鍵
+              td 入居時の鍵と同じ物か検品
+            tr
+              th ドアチャイム
+              td 機能性能の点検
+            tr
+              th 天井・壁・床
+              td 破損・消耗箇所の点検
+            tr
+              th 照明
+              td 点灯・消灯が一番多い箇所なので、スイッチ・電球の消耗を点検します。
+        table
+          caption キッチン・ダイニング
+          tbody
+            tr
+              th 天井
+              td(rowspan="3") 破損・開閉機能の点検。消耗に関しては賃貸紛争防止条例に基づき負担割合を計算します。
+            tr
+              th 壁
+            tr
+              th 床
+            tr
+              th 流し台
+              td 破損・消耗（ヘコミ・傷）箇所の点検
+            tr
+              th コンロ
+              td 機能性能の点検
+            tr
+              th 換気扇
+              td 機能性能（吸い込み、音など）の点検
+            tr
+              th 給湯機器
+              td 機能性能の点検
+            tr
+              th 照明
+              td キッチンからの油汚れが目立つ箇所なので、機能低下がないか点検
+            tr
+              th 給水・排水
+              td 排水詰まりなど重点に点検
+        table
+          caption 各部屋
+          tbody
+            tr
+              th 天井
+              td(rowspan="3") 破損・開閉機能の点検。消耗に関しては賃貸紛争防止条例に基づき負担割合を計算します。
+            tr
+              th 壁
+            tr
+              th 床
+            tr
+              th 照明
+              td 本体の機能点検・スイッチ点検・カバー破損点検
+            tr
+              th 収納
+              td 扉の開閉・内部の破損・棚板、仕切り板の破損確認
+            tr
+              th 建具
+              td 棚板、仕切り板の破損確認
+        table
+          caption 浴室
+          tbody
+            tr
+              th 天井
+              td(rowspan="3") 破損・開閉機能の点検。消耗に関しては賃貸紛争防止条例に基づき負担割合を計算します。
+            tr
+              th 壁
+            tr
+              th 床
+            tr
+              th 照明
+              td 本体の機能点検・スイッチ点検・カバー破損点検
+            tr
+              th 収納
+              td 扉の開閉・内部の破損・棚板、仕切り板の破損確認
+            tr
+              th ドア
+              td 破損・開閉機能の点検・ゴムパッキンの消耗点検
+            tr
+              th シャワー
+              td 機能点検
+            tr
+              th 風呂釜
+              td 破損・消耗箇所の点検
+            tr
+              th 換気扇
+              td 機能性能（吸い込み、音など）の点検
+        table
+          caption 洗面所
+          tbody
+            tr
+              th 天井
+              td(rowspan="3") 破損・開閉機能の点検。消耗に関しては賃貸紛争防止条例に基づき負担割合を計算します。
+            tr
+              th 壁
+            tr
+              th 床
+            tr
+              th 照明
+              td 本体の機能点検・スイッチ点検・カバー破損点検
+            tr
+              th ドア
+              td 破損・開閉機能の点検
+            tr
+              th 換気扇
+              td 機能性能（吸い込み、音など）の点検
+            tr
+              th 給水・排水
+              td 給水箇所のパッキン消耗の点検・排水の点検
+        table
+          caption トイレ
+          tbody
+            tr
+              th 天井
+              td(rowspan="3") 破損・開閉機能の点検。消耗に関しては賃貸紛争防止条例に基づき負担割合を計算します。
+            tr
+              th 壁
+            tr
+              th 床
+            tr
+              th 照明
+              td 本体の機能点検・スイッチ点検・カバー破損点検
+            tr
+              th ドア
+              td 破損・開閉機能の点検
+            tr
+              th 換気扇
+              td 機能性能（吸い込み、音など）の点検
+            tr
+              th 便器・水洗タンク
+              td 破損・消耗・機能点検
+            tr
+              th ウォシュレット
+              td 機能性能の点検
+            tr
+              th ペーパーホルダ
+              td 破損・消耗の点検
+        table
+          caption その他
+          tbody
+            tr
+              th エアコン
+              td 機能性能、汚れ・消耗箇所の点検、室外機の点検
+            tr
+              th エアコンのリモコン
+              td 機能性能、電池の交換
+            tr
+              th コンセント
+              td 機能性能の点検
+            tr
+              th カーテンレール
+              td 機能性能の点検
+            tr
+              th バルコニー
+              td 破損、消耗の確認
+            tr
+              th ブレーカー
+              td 通電確認、電圧確認

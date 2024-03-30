@@ -17,8 +17,8 @@ const uglify = require("gulp-uglify-es").default;
 const notify = require('gulp-notify');
 const changed  = require('gulp-changed');
 const filepath = {
-  html: './dist/',
-  css: './dist/assets/css',
+  html: './docs/',
+  css: './docs/assets/css',
 }
 const path = {
   pug: "['./src/pug/**/*.pug', '!./src/pug/**/_*.pug']",
@@ -30,7 +30,7 @@ const path = {
 function browserSyncFunc(done){
   browserSync.init({
     server: {
-      baseDir: 'dist/',
+      baseDir: 'docs/',
       directory: false
     },
     port: 3000,
@@ -88,7 +88,7 @@ function js() {
   .pipe(babel())
   .pipe(uglify())
   .pipe(concat('bundle.js'))
-  .pipe(dest('./dist/assets/js'));
+  .pipe(dest('./docs/assets/js'));
 }
 
 // watch

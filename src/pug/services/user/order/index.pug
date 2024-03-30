@@ -1,0 +1,134 @@
+extends ../../../_layout
+block var
+  - title = "お部屋探し | ラインズマン"
+  - keywords = "お部屋探し、高田馬場、新宿区、高田馬場駅、賃貸物件、東京"
+  - description = "「良い物件」は人それぞれ違います。ご希望の条件をしっかりヒヤリングし、物件はもちろん、契約内容、管理会社なども調査し、納得できる物件を探し出します。"
+  - url = "https://www.linesman.jp/services/order/"
+  - og_type = "article"
+  - og_img = "https://www.linesman.jp/uploads/ogp.png"
+  - published_date = "2016-10-07T17:14:10+09:00"
+  - modified_date = "2016-10-07T18:04:02+09:00"
+  - bodyclass = 'single'
+block body
+  .title
+    h1 ORDER
+    small お部屋探し
+    .lead 「良い物件」は人それぞれ違います。ご希望の条件をしっかりヒヤリングし、
+      br
+      | 物件はもちろん、契約内容、管理会社なども調査し、納得できる物件を探し出します。
+    hr
+  .wrapper
+    #side
+      nav
+        ul
+          li
+            a.current(href="#") お部屋探し
+          li
+            a(href="../retreat/") 退去費用診断
+    main#main
+      .entry-body
+        h2 物件探しから入居までをサポート
+        p まずは希望条件をヒアリング、そこから条件にあう物件を探します。
+          br
+          | その後、気になる物件を実際に見に行きます。
+          br
+          | 気に入れば申し込みをして、契約手続きへと進めます。
+        h2 料金について
+        .price 成約時に賃料の1ヶ月分（別途消費税）
+        p 成約時に仲介手数料として、ご請求させていただきます。
+        h2 ご入居までの流れ
+        .steps
+          .step
+            h3
+              i.ion-checkmark-circled
+              | 部屋探しをオーダー
+            p
+              a(href="https://www.kurachic.jp/ssl/counseling.html", target="_blank", rel="noopener noreferrer") お部屋探し予約フォーム
+              | より希望日時をご入力いただき送信してください。
+          .step
+            h3
+              i.ion-checkmark-circled
+              | ヒヤリング / 資料送付
+            p ヒアリングを行い、希望条件から、エリア、予算、間取り、その他条件など丁寧にヒアリングを行っていきます。不動産知識と照らし、最適な物件を探していきます。
+            p 条件が決まったら、不動産の資料をメールにてお送りいたします。
+          .step
+            h3
+              i.ion-checkmark-circled
+              | 物件選び
+            p 内見に行かなくてもある程度の情報は得ることができます。平均３０件ほどの物件から希望条件にあう物件を選んでいただきます。
+          .step
+            h3
+              i.ion-checkmark-circled
+              | 内見
+            p 資料だけではわからない部分（徒歩時間、街の雰囲気、周辺環境など）をご自身でチェックいただきます。
+            p 駅周辺、物件の周辺の見学を含めてが内見です。しっかりと街と物件の雰囲気もチェックしましょう。
+          .step
+            h3
+              i.ion-checkmark-circled
+              | 申込み手続き
+            p 契約者情報、連帯保証人様情報をご記入いただき、申し込みを行います。
+          .step
+            h3
+              i.ion-checkmark-circled
+              | 入居審査
+            p 管理会社、大家さんが申込書類を元に入居審査を行います。
+          .step
+            h3
+              i.ion-checkmark-circled
+              | 審査で承認が取れた後は、契約手続きとなります。
+            p 宅地建物取引士による、重要事項の説明、契約手続きが行なわれます。
+          .step
+            h3
+              i.ion-checkmark-circled
+              | 入居
+            p 鍵の受け渡しから入居までをしっかりサポートします。
+              br
+              | 電気、ガス、水道のライフラインの開通手続きやインターネット回線のことなど、新生活に向けての手続きなどもサポートいたします。
+        h2 資料例
+        p 一般的にはこのような資料だけで探す時代もありましたが、今はもっと詳しい資料も手配が可能です。
+        h2 申込み手続きの時に必要なもの
+        p 申込時には、一般的に以下のような情報が必要になります。
+        .steps
+          .step
+            h3
+              i.ion-information-circled
+              | 契約者情報
+            ul
+              li 名前
+              li 住所
+              li 生年月日
+              li お勤め先名前
+              li お勤め先住所
+              li お勤め先電話番号
+              li お勤め先資本金
+              li お勤め先従業員数
+              li 年収
+          .step
+            h3
+              i.ion-information-circled
+              | 連帯保証人様情報
+            ul
+              li 名前
+              li 住所
+              li 生年月日
+              li お勤め先名前
+              li お勤め先住所
+              li お勤め先電話番号
+              li お勤め先資本金
+              li お勤め先従業員数
+              li 年収
+        h2 参考記事
+        p 以下のリンクよりそれぞれの項目の詳細を確認ができます。
+        ul
+          li
+            a(href="https://www.kurachic.jp/column/915/", target="_blank", rel="noopener noreferrer") 問い合わせてから入居するまでのまとめ。部屋探し
+          li
+            a(href="https://www.kurachic.jp/search/?query=%E5%86%85%E8%A6%8B&amp;tag=1&amp;limit=37#id2") 内見記事のまとめ
+          li
+            a(href="https://www.kurachic.jp/search/?offset=1&amp;limit=37&amp;blog_id=26&amp;include_blogs=26&amp;and_or=and&amp;sort_order=descend&amp;sort_by=modified_on&amp;query=%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF#id3", target="_blank", rel="noopener noreferrer") 申し込みに関係する記事一覧
+          li
+            a(href="https://www.kurachic.jp/search/?offset=1&amp;limit=37&amp;blog_id=26&amp;include_blogs=26&amp;and_or=and&amp;sort_order=descend&amp;sort_by=modified_on&amp;query=%E5%AF%A9%E6%9F%BB#id4", target="_blank", rel="noopener noreferrer") 審査の記事まとめ
+          li
+            a(href="https://www.kurachic.jp/search/?offset=1&amp;limit=37&amp;blog_id=26&amp;include_blogs=26&amp;and_or=and&amp;sort_order=descend&amp;sort_by=modified_on&amp;query=%E5%A5%91%E7%B4%84#id5", target="_blank", rel="noopener noreferrer") 契約に関する記事はこちら
+          li
+            a(href="https://www.kurachic.jp/search/?offset=1&amp;limit=37&amp;blog_id=26&amp;include_blogs=26&amp;and_or=and&amp;sort_order=descend&amp;sort_by=modified_on&amp;query=%E5%85%A5%E5%B1%85#id6", target="_blank", rel="noopener noreferrer") 入居に関する記事はこちら

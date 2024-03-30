@@ -1,0 +1,61 @@
+extends ../_layout
+block var
+  - title = "取引先向け資料ダウンロード | LINESMAN"
+  - keywords = "不動産,マッチング,物件管理,賃貸,売買"
+  - description = "ラインズマンは暮らしを豊かにするために、マッチングやコンシェルジュなどの不動産サービスを提供する会社です。"
+  - url = "https://www.linesman.jp/"
+  - og_type = "article"
+  - og_img = "https://www.linesman.jp/uploads/ogp.png"
+  - published_date = "2016-10-07T17:14:10+09:00"
+  - modified_date = "2016-10-07T18:04:02+09:00"
+  - bodyclass = 'downloads-list'
+block body
+  .container
+    .title
+      h1 DOWNLOAD
+      small 書類のダウンロード
+      .lead 申込書・契約書など、ラインズマンとの取引に必要な資料をまとめています。
+        br
+        | 以下のリストより必要な資料をダウンロードしてご利用ください。
+      hr
+    .wrapper
+      .downloads
+        .download
+          h2
+            i.ion-checkmark-circled
+            | 賃貸 個人用
+          ul
+            li
+              a(href="./uploads/moushikomi_kojin.pdf" target="_blank")
+                i.ion-android-document
+                | 賃貸 入居申込書
+            li
+              a(href="./uploads/jid_kojin_lm.pdf" target="_blank")
+                i.ion-android-document
+                | 保証委託申込書（JID）
+        .download
+          h2
+            i.ion-checkmark-circled
+            | 賃貸 法人用
+          ul
+            li
+              a(href="./uploads/moushikomi_houjin.pdf" target="_blank")
+                i.ion-android-document
+                | 賃貸 居住用 入居申込書
+            li
+              a(href="./uploads/jigyouyou_houjin.pdf" target="_blank")
+                i.ion-android-document
+                | 事業用申込書（事務所・店舗）
+            li
+              a(href="./uploads/jid_houjin_lm.pdf" target="_blank")
+                i.ion-android-document
+                | 保証委託申込書（JID）
+        .download
+          h2
+            i.ion-checkmark-circled
+            | 賃貸 入居者用
+          ul
+            li
+              a(href="./uploads/kaiyaku.pdf" target="_blank")
+                i.ion-android-document
+                | 賃貸借契約　解約届け

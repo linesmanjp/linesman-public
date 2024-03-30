@@ -1,0 +1,35 @@
+extends ../../_layout
+block var
+  - title = "お部屋を探す人 | ラインズマン"
+  - keywords = "お部屋を探す人"
+  - description = "お部屋探しや退去費用診断など、お部屋を探している方向けのサービスをご用意しています。お客様の要望をじっくりヒヤリングし、提案型のお部屋探しをモットーとしています。"
+  - url = "https://www.linesman.jp/services/user/"
+  - og_type = "article"
+  - og_img = "https://www.linesman.jp/uploads/ogp.png"
+  - published_date = "2016-10-07T17:14:10+09:00"
+  - modified_date = "2016-10-07T18:04:02+09:00"
+  - bodyclass = 'service-contents'
+block body
+  .title
+    h1 user
+    small お部屋を探す人
+    hr
+  .wrapper
+    main#main
+      .services
+        .service-article
+          a(href="./order/")
+            figure(style="background-image:url(https://www.linesman.jp/services/uploads/service01.jpg);")
+            .detail
+              h2 お部屋探し
+              p
+                | 「良い物件」は人それぞれ違います。ご希望の条件をしっかりヒヤリングし、
+                | 物件はもちろん、契約内容、管理会社なども調査し、納得できる物件を探し出します。
+        .service-article
+          a(href="./retreat/")
+            figure(style="background-image:url(/services/uploads/20180114134605-039d0bb01bfde3a5fd66a2e20bcd03a92cfc489a.jpeg);")
+            .detail
+              h2 退去費用診断
+              p
+                | 国土交通省のガイドラインに基づいた適切な退去診断表を作成します。
+                | また契約内容も診断。　適切な退去費用を算出します。

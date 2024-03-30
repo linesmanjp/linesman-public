@@ -1,0 +1,81 @@
+@use "../global";
+
+.title {
+  padding: 64px 0;
+  text-align: center;
+  letter-spacing: 0.6px;
+  @include global.mq(md) {
+    padding: 32px 24px;
+  }
+  > span {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+    display: block;
+  }
+  small {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 600;
+    color: global.$dark-gray;
+    @include global.mq(md) {
+      font-size: 1.3rem;
+    }
+  }
+  h1,
+  h2 {
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: 6px;
+    color: global.$green;
+    text-transform: uppercase;
+    @include global.mq(lg) {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+    @include global.mq(md) {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  hr {
+    width: 100px;
+    border: none;
+    background: global.$green;
+    height: 1px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .lead {
+    margin-top: 16px;
+    color: global.$dark-gray;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    @include global.mq(md) {
+      font-size: 1.3rem;
+      text-align: left;
+      br {
+        display: none;
+      }
+    }
+    p {
+      &:not(:last-of-type) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

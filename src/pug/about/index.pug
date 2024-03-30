@@ -1,0 +1,78 @@
+extends ../_layout
+block var
+  - title = "会社概要 | ラインズマン"
+  - keywords = ""
+  - description = "社名 株式会社ラインズマン 所在地 〒169-0075 東京都新宿区高田馬場3.."
+  - url = "https://www.linesman.jp/about/"
+  - og_type = "article"
+  - og_img = "https://www.linesman.jp/uploads/ogp.png"
+  - published_date = "2016-10-07T17:14:10+09:00"
+  - modified_date = "2016-10-07T18:04:02+09:00"
+  - bodyclass = 'single'
+block body
+  .container
+    .title
+      h1 ABOUT US
+      small 会社概要
+      hr
+    .wrapper
+      #side
+        nav
+          ul
+            li
+              a.current(href="#") 会社概要
+            li
+              a(href="./staff/") スタッフ
+            li
+              a(href="./access/") アクセス
+      main#main
+        .entry-body
+          table
+            tbody
+              tr
+                th 社名
+                td 株式会社ラインズマン
+              tr
+                th 所在地
+                td 〒169-0075
+                  br
+                  | 東京都新宿区高田馬場3丁目18-1 ウイング高田馬場１階
+                  br
+                  a.external(href="https://goo.gl/maps/3vmebb6DPis", target="_blank", rel="noopener noreferrer")
+                    i.ion-ios-location
+                    | Google Map
+                  br
+                  a(href="https://www.linesman.jp/about/access")
+                    i.ion-ios-arrow-forward
+                    | アクセス方法
+              tr
+                th 代表者
+                td 門傳義文
+              tr
+                th 設立
+                td 2013年4月8日
+              tr
+                th 資本金
+                td 3,000,000円（2013年4月末現在）
+              tr
+                th 免許番号
+                td
+                  a.external(href="https://www.takken.metro.tokyo.lg.jp/detail?licenseno=13095345&amp;disp=1", target="_blank") 東京都知事（2）第95345号
+              tr
+                th 免許年月日
+                td 2018年5月17日
+              tr
+                th 専任の取引主任士
+                td 門傳義文
+                  br
+                  | 登録番号(東京)第217920号
+              tr
+                th 事業内容
+                td
+                  ul
+                    li 賃貸住宅の入居者斡旋
+                    li インターネット入居者斡旋
+                    li 賃貸住宅の運営管理
+                    li 建築の企画提案・テナント誘致
+                    li リフォーム
+                    li 損害保険代理業

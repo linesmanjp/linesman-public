@@ -376,12 +376,13 @@ $hero-height-sp: 320px;
 			}
 			#map {
 				width: 55%;
-				min-height: 500px;
-				box-shadow: 0 0 10px rgba(190,190,190,0.5);
+        iframe {
+          width: 100%;
+          aspect-ratio: 16 / 9;
+        }
         @include global.mq(md) {
           width: 100%;
           order: 1;
-          min-height: 240px;
         }
 			}
 		}

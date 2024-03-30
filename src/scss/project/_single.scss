@@ -39,27 +39,33 @@
         align-items: center;
         justify-content: flex-start;
         margin-bottom: 32px;
-        border-top: 1px solid #CCC;
-        border-bottom: 1px solid #CCC;
+        gap: 8px;
       }
 			li {
 				margin-bottom: 32px;
 				font-size: 1.5rem;
         @include global.mq(md) {
           box-sizing: border-box;
-          flex-basis: 50%;
+          flex-basis: calc(50% - 4px);
           font-size: 1.3rem;
           margin-bottom: 0;
         }
 				a {
+          font-weight: bold;
           @include global.mq(md) {
             padding: 16px;
             display: block;
+            border: 1px solid #EBEBEB;
+            border-radius: 8px;
           }
 					&.current,
 					&:hover {
 						font-weight: 600;
 						color: global.$green;
+            @include global.mq(md) {
+              background-color: global.$green;
+              color: white;
+            }
 					}
 					&:before {
 						font-family: "Ionicons";
@@ -262,37 +268,42 @@
 			figure {
 				box-sizing: border-box;
 				@include global.flex(nowrap,space-between,stretch);
-				.img {
-					@include global.background(center,center);
-					width: 100px;
-					height: 100px;
+        column-gap: 32px;
+        @include global.mq(md) {
+          display: block;
+        }
+				img {
+          display: block;
+					width: 220px;
+					height: 220px;
 					overflow: hidden;
-					border-radius: 100%;
-					box-shadow: 0 0 10px rgba(190,190,190,0.5);
+          box-shadow: none;
+          @include global.mq(md) {
+            margin-bottom: 24px;
+            margin-left: auto;
+            margin-right: auto;
+          }
 				}
 				figcaption {
 					flex: 1;
-					margin-left: 32px;
 					h2 {
-						margin-bottom: 8px;
 						margin-top: 0;
 						line-height: 1;
-						small {
-							font-weight: 300;
-							display: inline-block;
-							font-size: 1.3rem;
-							margin-left: 24px;
-							color: global.$dark-gray;
-						}
+            margin-bottom: 4px;
 					}
+          h3 {
+            display: inline-block;
+            font-size: 1.3rem;
+            color: global.$dark-gray;
+            margin-bottom: 4px;
+          }
 					span {
 						color: global.$dark-gray;
 						display: block;
 						text-transform: uppercase;
-						font-weight: 500;
-						margin: 12px 0;
 					}
 					p {
+            margin-top: 24px;
 						font-size: 1.3rem;
 						margin-bottom: 0;
 					}
@@ -329,10 +340,12 @@
 			}
 		}
 		.pictures {
-			@include global.flex(wrap,space-between,stretch);
+			display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 36px;
 			.picture {
 				margin-bottom: 48px;
-				flex-basis: 46%;
+				flex-basis: calc(33% - 12px);
 				figure {
 					@include global.background(center,center);
 					width: 120px;

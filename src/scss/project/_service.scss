@@ -8,8 +8,19 @@
 		}
 	}
 	.services {
-		@include global.flex(wrap,center,flex-start);
-    row-gap: 36px;
+		display: grid;
+    justify-content: center;
+    align-items: stretch;
+    @include global.mq(xl) {
+      grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
+    }
+    @include global.mq(lg) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include global.mq(md) {
+      grid-template-columns: 1fr;
+    }
+    gap: 32px;
     padding-left: 80px;
     padding-right: 80px;
     @include global.mq(lg) {
@@ -17,24 +28,26 @@
       padding-right: 24px;
     }
     @include global.mq(md) {
-      display: block;
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+      gap: 24px;
     }
 		.service-article {
-			flex-basis: 50%;
 			box-sizing: border-box;
+      box-shadow: 0 0 20px rgba(0,0,0,.1);
+      border-radius: 10px;
+
 			a {
         box-sizing: border-box;
-				border-radius: 8px;
-				padding: 24px;
+        padding: 24px;
 				display: block;
+        height: 100%;
         @include global.mq(md) {
           display: flex;
           align-items: center;
           justify-content: space-between;
           column-gap: 24px;
-          padding: 12px 24px;
+          padding: 24px;
         }
 				&:hover {
 					background-color: global.$light-green;

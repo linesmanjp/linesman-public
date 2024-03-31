@@ -245,10 +245,18 @@
 			}
 		}
 		.steps {
-			@include global.flex(wrap,space-between,stretch);
+			display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 36px;
+      @include global.mq(md) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
 			.step {
-				margin-bottom: 48px;
-				flex-basis: 46%;
+        box-sizing: border-box;
+        padding: 24px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        border-radius: 10px;
 				h3 {
 					color: global.$dark-gray;
 					i {
@@ -343,18 +351,20 @@
 			display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 36px;
+      @include global.mq(md) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
 			.picture {
-				margin-bottom: 48px;
-				flex-basis: calc(33% - 12px);
+        padding: 24px;
+        box-shadow: 0 0 10px rgba(190,190,190,0.5);
+        border-radius: 10px;
 				figure {
 					@include global.background(center,center);
-					width: 120px;
 					height: 120px;
 					margin-left: auto;
 					margin-right: auto;
-					overflow: hidden;
-					border-radius: 100%;
-					box-shadow: 0 0 10px rgba(190,190,190,0.5);
+
 				}
 				h3 {
 					color: global.$dark-gray;

@@ -272,6 +272,22 @@
 				}
 			}
 		}
+    .media {
+      #media_title {
+        margin-top: 36px;
+        margin-bottom: 16px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: global.$black;
+        @include global.mq(md) {
+          font-size: 1.4rem;
+        }
+      }
+      ul {
+        font-size: 1.3rem;
+        gap: 16px;
+      }
+    }
 		.staff {
 			figure {
 				box-sizing: border-box;
@@ -297,7 +313,7 @@
 					h2 {
 						margin-top: 0;
 						line-height: 1;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
 					}
           h3 {
             display: inline-block;
@@ -309,6 +325,8 @@
 						color: global.$dark-gray;
 						display: block;
 						text-transform: uppercase;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
 					}
 					p {
             margin-top: 24px;

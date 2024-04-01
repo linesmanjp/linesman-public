@@ -7,52 +7,13 @@ $hero-height-sp: 320px;
   .container {
     background-color: white;
   }
-  #hero_height {
-    height: $hero-height;
-    @include global.mq(md) {
-      height: $hero-height-sp;
-    }
-  }
 	#hero {
-    position: fixed;
-    top: global.$header-height;
     width: 100%;
-		height: $hero-height;
-		text-align: center;
-    z-index: -1;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image:url(../img/bg3.jpg);
-    @include global.mq(md) {
-      top: global.$sp-header-height;
-      height: $hero-height-sp;
+    iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
     }
-		.hero-contents {
-			position: absolute;
-			top: 50%;
-      transform: translateY(-50%);
-			width: 100%;
-			text-shadow: 0 0 10px rgba(190,190,190,0.8);
-			h1 {
-				font-family: Poppins,sans-serif;
-				font-weight: 600;
-				text-align: center;
-				font-size: 6rem;
-				letter-spacing: 3px;
-        @include global.mq(md) {
-          font-size: 2.6rem;
-        }
-			}
-			p {
-				font-size: 1.6rem;
-				line-height: 1.8;
-				font-weight: 600;
-        @include global.mq(md) {
-          font-size: 1.2rem;
-        }
-			}
-		}
 	}
 
 	.more {

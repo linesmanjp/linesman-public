@@ -40,10 +40,10 @@
 				font-weight: bold;
 				font-size: 1.6rem;
 				line-height: 1;
-				background-color: #EBEBEB;
+				background-color: global.$light-green;
+        color: global.$green;
 				padding: 24px 0;
         column-gap: 8px;
-        color: global.$black;
         @include global.mq(md) {
           padding: 16px 0;
           font-size: 1.4rem;

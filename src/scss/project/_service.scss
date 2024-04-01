@@ -35,8 +35,7 @@
 		.service-article {
 			box-sizing: border-box;
       box-shadow: 0 0 20px rgba(0,0,0,.1);
-      border-radius: 10px;
-
+      border-radius: 8px;
 			a {
         box-sizing: border-box;
         padding: 24px;
@@ -44,10 +43,10 @@
         height: 100%;
         @include global.mq(md) {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: space-between;
           column-gap: 24px;
-          padding: 24px;
+          padding: 16px;
         }
 				&:hover {
 					background-color: global.$light-green;
@@ -60,12 +59,12 @@
 				height: 180px;
 				overflow: hidden;
 				border-radius: 100%;
-				box-shadow: 0 0 10px 0 rgba(190,190,190,0.5);
 				@include global.background(center,center);
 				margin-bottom: 24px;
         @include global.mq(md) {
           width: 96px;
           height: 96px;
+          border-radius: 0;
           margin-bottom: 0;
         }
 			}
@@ -81,6 +80,7 @@
           @include global.mq(md) {
             font-size: 1.4rem;
             text-align: left;
+            margin-bottom: 6px;
           }
 				}
 				p {

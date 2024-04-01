@@ -47,13 +47,13 @@
         @include global.mq(md) {
           box-sizing: border-box;
           flex-basis: calc(50% - 4px);
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           margin-bottom: 0;
         }
 				a {
           font-weight: bold;
           @include global.mq(md) {
-            padding: 16px;
+            padding: 12px;
             display: block;
             border: 1px solid #EBEBEB;
             border-radius: 8px;
@@ -99,6 +99,9 @@
 			margin-bottom: 18px;
 			font-weight: 600;
 		}
+    .price,
+    .yen,
+    .youtube,
 		ul,
 		ol,
 		p,
@@ -124,15 +127,42 @@
         font-size: 1.4rem;
       }
 		}
+    .youtube {
+      iframe {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+    }
 		.price {
 			color: global.$green;
-			font-weight: 600;
 			font-size: 1.6rem;
-			padding: 16px;
-			background-color: global.$light-green;
-			margin-bottom: 12px;
-			border-radius: 5px;
+			padding: 16px 24px;
+			border: 2px solid global.$green;
+			border-radius: 8px;
+      font-weight: bold;
+      @include global.mq(md) {
+        padding: 12px;
+        font-size: 1.3rem;
+      }
 		}
+    .yen {
+      display: flex;
+      align-items: baseline;
+      column-gap: 8px;
+      span {
+        font-family: "Roboto", sans-serif;
+        font-size: 6rem;
+        font-weight: bold;
+        color: global.$green;
+        @include global.mq(md) {
+          font-size: 4rem;
+        }
+      }
+      small {
+        font-size: 1.3rem;
+      }
+    }
 		p {
 			font-weight: 300;
 		}
@@ -181,8 +211,9 @@
 				}
 				th {
 					width: 20%;
-					background-color: #fbfbfb;
-					font-weight: 600;
+					background-color: global.$light-green;
+          color: global.$green;
+					font-weight: bold;
           text-align: left;
           @include global.mq(md) {
             width: 40%;
@@ -257,7 +288,8 @@
         box-shadow: 0 0 20px rgba(0,0,0,0.1);
         border-radius: 10px;
 				h3 {
-					color: global.$dark-gray;
+          font-weight: bold;
+					color: global.$green;
 					i {
 						display: inline-block;
 						margin-right: 5px;
@@ -385,7 +417,8 @@
 
 				}
 				h3 {
-					color: global.$dark-gray;
+					color: global.$green;
+          font-weight: bold;
 					i {
 						display: inline-block;
 						margin-right: 5px;

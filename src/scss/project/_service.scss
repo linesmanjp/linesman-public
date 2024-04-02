@@ -93,38 +93,32 @@
 		}
 	}
 	.service-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 32px;
+    row-gap: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+    @include global.mq(lg) {
+      padding-left: 24px;
+      padding-right: 24px;
+      grid-template-columns: 1fr;
+    }
+    @include global.mq(md) {
+      padding-left: 24px;
+      padding-right: 24px;
+      grid-template-columns: 1fr;
+    }
 		.service-category {
 			box-sizing: border-box;
 			.title {
 				padding: 0;
 				margin-bottom: 16px;
 			}
-			.services {
-				display: block;
-				.service-article {
-					margin-bottom: 0;
-					flex-basis: auto;
-					a {
-						padding: 24px;
-						@include global.flex(nowrap,space-between,stretch);
-						figure {
-							margin-left: 0;
-							margin-right: 0;
-							margin-bottom: 0;
-						}
-						.detail {
-							margin-left: 24px;
-							flex: 1;
-							h2 {
-								text-align: left;
-							}
-							p {
-								margin-bottom: 0;
-							}
-						}
-					}
-				}
-			}
+      .services {
+        padding-left: 0;
+        padding-right: 0;
+      }
 		}
 	}
 }

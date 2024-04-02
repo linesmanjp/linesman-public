@@ -144,3 +144,36 @@
 		}
 	}
 }
+
+#breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  column-gap: 16px;
+  height: 40px;
+  line-height: 1;
+  @include global.mq(md) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  span {
+    font-size: 1.2rem;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    column-gap: 16px;
+    color: global.$green;
+    .material-icons {
+      font-size: 1.6rem;
+    }
+    &::after {
+      content: '>';
+      font-size: 1.2rem;
+    }
+  }
+}

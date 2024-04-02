@@ -54,6 +54,11 @@ html(lang="ja")
       iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-MX6FR63", height="0", width="0", style="display:none;visibility:hidden")
     #fb-root
     include ./inc/_header.pug
+    unless design == 'home'
+      nav#breadcrumbs
+        a(href="/")
+          span.material-icons home
+        block breadcrumbs
     block body_header
     .container
       block body

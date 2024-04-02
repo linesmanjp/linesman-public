@@ -151,12 +151,13 @@
       align-items: baseline;
       column-gap: 8px;
       span {
-        font-family: "Roboto", sans-serif;
-        font-size: 6rem;
-        font-weight: bold;
+        font-size: 8rem;
+        font-family: "din-2014", sans-serif;
+        font-weight: 700;
+        font-style: normal;
         color: global.$green;
         @include global.mq(md) {
-          font-size: 4rem;
+          font-size: 6rem;
         }
       }
       small {

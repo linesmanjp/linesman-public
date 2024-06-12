@@ -34,20 +34,13 @@
     }
 		.service-article {
 			box-sizing: border-box;
-      box-shadow: 0 0 20px rgba(0,0,0,.1);
+      background-color: white;
       border-radius: 8px;
 			a {
         box-sizing: border-box;
         padding: 24px;
 				display: block;
         height: 100%;
-        @include global.mq(md) {
-          display: flex;
-          align-items: flex-start;
-          justify-content: space-between;
-          column-gap: 24px;
-          padding: 16px;
-        }
 				&:hover {
 					background-color: global.$light-green;
 				}
@@ -61,12 +54,6 @@
 				border-radius: 100%;
 				@include global.background(center,center);
 				margin-bottom: 24px;
-        @include global.mq(md) {
-          width: 96px;
-          height: 96px;
-          border-radius: 0;
-          margin-bottom: 0;
-        }
 			}
 			.detail {
         @include global.mq(md) {

@@ -38,10 +38,13 @@ html {
 }
 
 body {
-	font-family: Hiragino Sans,Hiragino Kaku Gothic ProN,Meiryo,sans-serif;
+	font-family: "Roboto", "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
 	font-size: 10px;
 	font-size: 1.0rem;
 	line-height: 1.5;
+  font-style: normal;
 	position: relative;
 	color: global.$black;
 	padding: 0;
@@ -51,11 +54,14 @@ body {
 	height: 100%;
 	letter-spacing: 0.6px;
 	font-weight: 300;
+  -webkit-backface-visibility: hidden;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-feature-settings: "palt";
 	font-feature-settings: "palt";
+  word-spacing: 1px;
+  background-color: #f3f3f3;
 	&.locked {
 		position: fixed;
 		top: 0;
